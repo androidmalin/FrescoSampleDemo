@@ -64,6 +64,7 @@ public class AdvanceActivity extends AppCompatActivity {
         OkHttpClient okHttpClient = new OkHttpClient();
         ImagePipelineConfig imagePipelineConfig = OkHttpImagePipelineConfigFactory.newBuilder(this, okHttpClient)
                 .setProgressiveJpegConfig(progressiveJpegConfig)
+                .setDownsampleEnabled(true)
                 .build();
 
         //下面这个是Android默认的网络请求
